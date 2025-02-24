@@ -26,6 +26,13 @@ let package = Package(
                 .product(name: "GRDB", package: "GRDB.swift"),
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
             ],
-            path: "GRDBSnapshotTesting/Sources")
+            path: "GRDBSnapshotTesting/Sources"
+        ),
+        .testTarget(
+            name: "GRDBSnapshotTestingTests",
+            dependencies: ["GRDBSnapshotTesting"],
+            path: "GRDBSnapshotTestingTests",
+            resources: [.process("__Snapshots__")]
+        )
     ]
 )

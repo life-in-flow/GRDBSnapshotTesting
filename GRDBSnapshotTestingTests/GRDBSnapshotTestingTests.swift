@@ -4,10 +4,14 @@ import SnapshotTesting
 import GRDBSnapshotTesting
 
 class GRDBSnapshotTestingTests: XCTestCase {
-    private let db = DatabaseQueue()
-    
+    private var db: DatabaseQueue!
+
     private let record = false
-    
+
+    override func setUp() async throws {
+        self.db = try DatabaseQueue()
+    }
+
     func testEmptyDatabase() throws {
         assertSnapshot(matching: db, as: .dbDump, record: record)
     }
