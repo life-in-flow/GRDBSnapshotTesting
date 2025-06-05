@@ -24,7 +24,7 @@ struct SQLiteMaster: Decodable, FetchableRecord, TableRecord {
 }
 
 extension SQLiteMaster {
-    private enum Columns {
+    enum Columns {
         static let type = Column("type")
         static let sql = Column("sql")
         static let name = Column("name")
