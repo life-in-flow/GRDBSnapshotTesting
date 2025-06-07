@@ -16,7 +16,7 @@ let package = Package(
             targets: ["GRDBSnapshotTesting"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/life-in-flow/GRDB.swift", branch: "sqlcipher"),
+        .package(url: "https://github.com/life-in-flow/GRDB.swift", branch: "sqlcipher-package"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", .upToNextMajor(from: "1.18.1")),
     ],
     targets: [
